@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/TodoApp');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/TodoApp');
 
 //unlike Monogoclient.connect, where connections are managed manually,
 //mongoose maintains the connection over time on the mongoose variable,
